@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Camera
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block color="light" (click)="makePicture()">
+    Make Picture
+  </button>
+  {{ imageData }}
+  <img [src]="base64Image" *ngIf="base64Image" />
+</ion-content>

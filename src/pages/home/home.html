@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Feed</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let post of allPosts">
+    <img src="{{ post.picture.url }}" />
+    <ion-item>
+      <h2>Damaged: {{post.damage}}</h2>
+      <h2>Undamaged: {{ post.undamaged }}</h2>
+    </ion-item>
+  </ion-card>
+</ion-content>
