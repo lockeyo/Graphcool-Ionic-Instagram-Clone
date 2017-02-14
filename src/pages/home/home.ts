@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Apollo } from 'apollo-angular';
 import { Subscription } from 'rxjs/Subscription';
@@ -46,6 +46,7 @@ export class HomePage {
       pollInterval : 5000
     }).subscribe(({data, loading}) => {
       console.log(data);
+      console.log(loading);
       this.allPosts = (data as any).allImages;
     });
   }

@@ -3,7 +3,6 @@ import { NavController } from 'ionic-angular';
 import { Apollo } from 'apollo-angular';
 import {Camera} from 'ionic-native';
 import { Transfer } from 'ionic-native';
-import { HTTP } from 'ionic-native';
 
 import gql from 'graphql-tag';
 

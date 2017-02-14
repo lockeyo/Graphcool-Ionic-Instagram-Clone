@@ -1,12 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import {Http} from 'angular2/http';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { CameraPage } from '../pages/camera/camera';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { Apollo } from 'apollo-angular';
 import { ApolloModule } from 'apollo-angular';
 import { ApolloClient } from 'apollo-client';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
