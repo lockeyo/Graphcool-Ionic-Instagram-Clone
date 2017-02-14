@@ -63,6 +63,7 @@ To run my script. Just open your terminal and go to the base directory of this r
 To get data from your client you have to edit the file "src/app/client.ts". Just copy the endpoint from the Graph.cool backend and paste it to the client.ts file.
 
 **camera.ts**
+
 To make the upload work you have to edit the file "src/pages/camera/camera.ts". Just copy the file endpoint form the backend and paste it to the camera.ts file to the variable "urlTo".
 
 ## Issues
