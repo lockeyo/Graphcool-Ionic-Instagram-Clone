@@ -7,6 +7,7 @@ A Instagram clone made with Ionic Framework 2 and Graph.cool backend.
 * Gett a Grap.cool Account (https://www.graph.cool/docs/quickstart/)
 * Clone this repository
 * Install Cordova Plugings
+* Change the variables with your own Graph.cool endpoints
 
 ### How to install Ionic Framework
 
