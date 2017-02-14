@@ -1,9 +1,11 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { CameraPage } from '../pages/camera/camera';
 import { HomePage } from '../pages/home/home';
+import { SearchPage } from '../pages/search/search';
+import { CameraPage } from '../pages/camera/camera';
+import { FeedPage } from '../pages/feed/feed';
+import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ApolloModule } from 'apollo-angular';
 import { ApolloClient } from 'apollo-client';
@@ -19,9 +21,11 @@ function provideClient(): ApolloClient {
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    CameraPage,
     HomePage,
+    SearchPage,
+    CameraPage,
+    FeedPage,
+    ProfilePage,
     TabsPage
   ],
   imports: [
@@ -31,9 +35,11 @@ function provideClient(): ApolloClient {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    CameraPage,
     HomePage,
+    SearchPage,
+    CameraPage,
+    FeedPage,
+    ProfilePage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

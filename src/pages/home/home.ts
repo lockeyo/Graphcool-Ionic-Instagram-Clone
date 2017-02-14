@@ -31,6 +31,20 @@ export class HomePage {
     public apollo: Apollo
   ) {}
 
+  doRefresh(refresher) {
+   console.log('Begin async operation', refresher);
+
+
+   this.allPostsSub = this.apollo.watchQuery({
+     query: AllPostsQuery
+     }).subscribe(({data, loading}) => {
+       console.log(data);
+       console.log(loading);
+       this.allPosts = (data as any).allImages;;
+       refresher.complete();
+    });
+  }
+
   setImage(url: string) {
     const styles = {
       'background-image':  `url(${url})`,
@@ -47,7 +61,7 @@ export class HomePage {
     }).subscribe(({data, loading}) => {
       console.log(data);
       console.log(loading);
-      this.allPosts = (data as any).allImages;
+      this.allPosts = (data as any).allImages;;
     });
   }
 }

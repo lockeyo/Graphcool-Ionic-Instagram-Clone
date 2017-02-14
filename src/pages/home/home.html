@@ -1,10 +1,15 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Feed</ion-title>
+    <ion-title>InstaGrapQL</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
   <ion-card *ngFor="let post of allPosts">
     <img src="{{ post.picture.url }}" />
   </ion-card>
