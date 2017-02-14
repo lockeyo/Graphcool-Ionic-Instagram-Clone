@@ -18,7 +18,7 @@ You can start an Ionic project in around 3 minutes. To install Ionic Framework o
 * npm install -g cordova ionic
 
 
-### How to get a Grap.cool Account
+### How to get a Graph.cool Account
 
 This project uses the Graph.cool backend. Graph.cool is using the power of the GraphQL query language to power their backend. It's fast, reliable and easy to set up. If you haven't heard of GraphQL you should visit their website first (LinK: http://graphql.org/learn/). GraphQL was developed by Facebook Inc. and is the successor of REST. If you want to see what the future looks like just use GraphQL to build your next API. And if you don't want to reinvent the wheel all the time use the awesome Backend-as-a-Service from Graph.cool.
 
