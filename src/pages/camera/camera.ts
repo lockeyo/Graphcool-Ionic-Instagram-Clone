@@ -11,8 +11,8 @@ import gql from 'graphql-tag';
   templateUrl: 'camera.html'
 })
 export class CameraPage {
-
-  description: string;
+  
+    description: string;
     imageUrl: string;
     public base64Image: string;
     public imageData: string;

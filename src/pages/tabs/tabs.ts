@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 import { SearchPage } from '../search/search';
 import { CameraPage } from '../camera/camera';
 import { FeedPage } from '../feed/feed';
 import { ProfilePage } from '../profile/profile';
+import { AuthService } from '../../providers/auth-service';
+import { LoginPage } from '../login/login';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -18,7 +21,16 @@ export class TabsPage {
   tab4Root: any = FeedPage;
   tab5Root: any = ProfilePage;
 
-  constructor() {
+  constructor(
+    private auth: AuthService,
+    private nav: NavController
+  ) {
+  }
 
+  logout() {
+    this.auth.logout().subscribe(succ => {
+      console.log('Logout!');
+        this.nav.setRoot(LoginPage)
+    });
   }
 }

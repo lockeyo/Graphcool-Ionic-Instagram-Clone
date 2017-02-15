@@ -10,6 +10,10 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
+  <button ion-button block color="light" (click)="logout()">
+    Logout
+  </button>
+
   <ion-card *ngFor="let post of allPosts">
     <img src="{{ post.picture.url }}" />
   </ion-card>

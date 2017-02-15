@@ -7,6 +7,11 @@ import { CameraPage } from '../pages/camera/camera';
 import { FeedPage } from '../pages/feed/feed';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
+
+import { LoginPage } from '../pages/login/login';
+import { AuthService } from '../providers/auth-service';
+import { RegisterPage } from '../pages/register/register';
+
 import { ApolloModule } from 'apollo-angular';
 import { ApolloClient } from 'apollo-client';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -26,7 +31,9 @@ function provideClient(): ApolloClient {
     CameraPage,
     FeedPage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -40,9 +47,11 @@ function provideClient(): ApolloClient {
     CameraPage,
     FeedPage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [AuthService, {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
 
